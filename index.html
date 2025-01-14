@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbalism SPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Herbalism SPA</h1>
+    </header>
+
+    <!-- First Navigation Bar -->
+    <div class="top-nav">
+        <input type="text" placeholder="Search..." id="search-bar">
+        <button id="login-btn">Login</button>
+    </div>
+
+    <!-- Second Navigation Bar -->
+    <nav class="main-nav">
+        <button class="nav-btn" data-target="about">About Herbalism</button>
+        <button class="nav-btn" data-target="herbs">Herbs</button>
+        <button class="nav-btn" data-target="recipes">Tea Recipes</button>
+        <button class="nav-btn" data-target="health">Health & Herbs</button>
+    </nav>
+
+    <!-- Main Section with Background -->
+        <main id="main" >
+            <!-- Dynamic Content Area -->
+            <section id="content-area">
+                <div id="about" class="content-section hidden">
+                    <h2>About Herbalism</h2>
+                    <p>“For years, plant-based remedies have been used as a traditional practice to treat and prevent a broad range of diseases.</p>
+                    <p>During the past decade, natural therapies have regained public attention..."</p>
+                    <p> REF: Capasso, R., Lucariello, G. and Cicia, D. eds., (2021). Natural Medicine in Therapy..</p>
+                </div>
+
+                <div id="herbs" class="content-section hidden">
+                    <h2>Herbs</h2>
+                    <div class="herbs-container">
+                        <ul id="herbs-list"></ul> <!-- Plant names -->
+                        <div id="herb-details" class="herb-details hidden">
+                            <!-- Details container -->
+                            <h3 id="herb-name"></h3>
+                            <img id="herb-image" src="" alt="Herb image" style="width: 300px; height: 500px;" />
+                            <p id="herb-description"></p>
+                            <ul id="herb-benefits"></ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="recipes" class="content-section hidden">
+                    <h2>Tea Recipes</h2>
+                    <p>Explore our collection of tea recipes...</p>
+                </div>
+
+                <div id="health" class="content-section hidden">
+                    <h2>Health & Herbs</h2>
+                    <p>Learn about the health benefits of herbs...</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Chatbot -->
+        <aside class="chatbot">
+            <h3>Chatbot</h3>
+            <p>The chatbot interface will be placed here.</p>
+        </aside>
+
+        <!-- Footer -->
+        <footer>
+            <p>Thank you for visiting!</p>
+        </footer>
+
+        <script src="script.js"></script>
+</body>
+</html>

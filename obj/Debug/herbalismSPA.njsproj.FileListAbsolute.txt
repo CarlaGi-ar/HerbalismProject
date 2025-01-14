@@ -1,0 +1,3 @@
+C:\Users\University\OneDrive - University of Plymouth\Desktop\portofolio\SgPageApp\HerbalismSPA\obj\Debug\herbalismSPA.njsproj.AssemblyReference.cache
+C:\Users\University\OneDrive - University of Plymouth\Desktop\portofolio\SgPageApp\HerbalismSPA\obj\Debug\herbalismSPA.njsproj.CoreCompileInputs.cache
+C:\Users\University\OneDrive - University of Plymouth\Desktop\portofolio\SgPageApp\HerbalismSPA\bin\Microsoft.NodejsTools.WebRole.dll

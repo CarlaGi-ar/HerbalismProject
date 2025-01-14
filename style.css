@@ -1,0 +1,238 @@
+/* General Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Header */
+header {
+    background-color: #F8EDE3;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    text-shadow: 0 0 10px black, 0 0 20px black;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    background-color: #BDD2B6;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#search-bar {
+    width: 80%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+#login-btn {
+    background-color: #2e3d0f;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Main Navigation Bar */
+.main-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #A2B29F;
+    padding: 10px;
+}
+
+.nav-btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%; /* Make buttons stretch across the navigation bar */
+}
+
+    .nav-btn:hover {
+        background-color: #2e3d0f;
+    }
+
+/* Main Section */
+#main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #FFDBBA97;
+    background-image: url('./assets/herbalism.png');
+    background-size: 80%; /* Adjust to fit content */
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    background-repeat: no-repeat;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+/* Dynamic Content Area */
+#content-area {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dynamic Content Sections */
+/* Hidden by Default */
+.content-section {
+    display: none; /* Hidden by default */
+    opacity: 0;
+    transform: translateY(20px); /* Slide in animation */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+    .content-section.active {
+        display: block; /* Show active section */
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .herbs-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#herbs-list {
+    list-style-type: none;
+    padding: 0;
+    width: 30%;
+}
+
+#herbs-list li {
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#herbs-list li:hover {
+    background-color: #f0f0f0;
+}
+
+.herb-details {
+    width: 65%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.herb-details.hidden {
+    display: none;
+}
+
+#herb-benefits {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Chatbot */
+.chatbot {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #A6B37D;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #B99470;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+/* Tablets */
+@media screen and (max-width: 1024px) {
+    #main {
+        background-size: contain; /* Fit image within view */
+        background-position: top;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    #main {
+        background-size: 100%; /* Zoom out */
+        background-position: center top;
+        background-attachment: scroll; /* Disable parallax for mobile */
+    }
+}
+
+/* Extra Small Devices */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    #content-area {
+        width: 100%; /* Use full width */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .nav-btn {
+        font-size: 14px;
+        padding: 8px 10px; /* Reduce padding */
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    /* Stack navigation buttons vertically for small screens */
+    .main-nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    /* Adjust background position for smaller screens */
+    main {
+        background-position: center top; /* Better for portrait view */
+        background-size: auto 100%; /* Ensure it fits vertically */
+    }
+
+    /* Make navigation buttons full-width */
+    .nav-btn {
+        width: 100%;
+        text-align: center; /* Center-align text in buttons */
+    }
+
+    /* Content area adjustments */
+    #content-area {
+        width: 90%; /* Slightly increase width for small screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    /* Chatbot Sidebar */
+    .chatbot {
+        width: 200px; /* Reduce width of chatbot */
+        bottom: 10px; /* Adjust positioning */
+        right: 10px;
+    }
+}
